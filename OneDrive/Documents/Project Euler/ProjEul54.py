@@ -97,9 +97,10 @@ class player:
         #if the program has not returned anything at this point, the hand msut be a high card hand.
         else:
             return [0,highcard]
-        
+    #for testing the code
     def printhand(self):
         print(self.hand)
+    #in case the rank of the hands is the same, this returns all the cards in the hand in descending order
     def handvalues(self):
         output=[]
         i=12
@@ -176,6 +177,5 @@ listofgames=breakupgames(games)
 count=0
 for g in listofgames:
     newgame=pokergame(g)
-    newgame.testranking()
     ans+=newgame.whowins()
 print(ans)
